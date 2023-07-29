@@ -406,6 +406,7 @@ input{
 .product__item {
     border: 1px solid var(--border-color);
     border-radius: 1.5rem;
+    transition: all 0.2s var(--transition);
 }
 
 .product__banner {
@@ -419,6 +420,17 @@ input{
 
 .product__images {
     display: block;
+    overflow: hidden;
+    border-radius: 1.25rem;
+}
+
+.product__img {
+    vertical-align: middle;
+    transition: all 1.5s var(--transition);
+}
+
+.product__item:hover .product__img {
+    transform: scale(1.1);
 }
 
 .product__img.hover {
@@ -434,6 +446,7 @@ input{
     transform: translate(-50%, -50%);
     display: flex;
     column-gap: 0.5rem;
+    transition: all .2s var(--transition);
 }
 
 .action__btn {
@@ -454,6 +467,7 @@ input{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    transition: all .3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }
 
 .action__btn::before {
@@ -523,7 +537,9 @@ input{
     margin-bottom: 0.75rem;
 }
 
-
+.product__price .new__price {
+    font-size: var(--large-font-size);
+}
 
 .cart__btn {
     position: absolute;
@@ -542,13 +558,43 @@ input{
 }
 
 /* Product Hover */
-
 .product__img.hover,
 .product__actions,
 .action__btn::before,
-.action__btn::after {
+.action__btn::after,
+.product__item:hover .product__img.default {
     opacity: 0;
 }
+
+.product__item:hover {
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.product__item:hover .product__img.hover,
+.product__item:hover .product__actions,
+.action__btn:hover::before,
+.action__btn:hover::after {
+    opacity: 1;
+}
+
+.action__btn:hover::before,
+.action__btn:hover::after {
+    transform: translate(-50%) translateY(-0.5rem);
+}
+
+.action__btn:hover {
+    background-color: var(--first-color);
+    border-color: var(--first-color);
+    color: var(--body-color);
+}
+
+/*=============== DEALS ===============*/
+
+/*=============== NEW ARRIVAL ===============*/
+
+/*=============== SHOWCASE ===============*/
+
+/*=============== NEWSLETTER ===============*/
 
 
     :root {
