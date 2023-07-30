@@ -868,12 +868,12 @@ input{
     display: flex;
     justify-content: space-between;
     padding-block: 1.25rem;
-    border-top: 1px solid black;
+    border-top: 2px solid var(--border-color-alt);
     
 }
 
 .copyright {
-    color: var(--first-color);
+    color: var(--normal-font-size);
     font-size: var(--small-font-size);
 }
 
